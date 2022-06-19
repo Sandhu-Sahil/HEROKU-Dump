@@ -1,0 +1,19 @@
+{% extends "employment/layout.html" %}
+{% load static %}
+
+{% block body %}
+<div style="text-align:center;">
+    <img src="static/employment/logo.png" alt="logo" width="150px">
+    <br>
+    <a class="btn btn-sm btn-outline-primary" href="{% url 'employee' %}">Employee Dashboard</a>
+    <a class="btn btn-sm btn-outline-primary" href="{% url 'company' %}">Companies</a>
+    <a class="btn btn-sm btn-outline-primary" href="{% url 'your_company' %}">Your Companies</a>
+    <a class="btn btn-sm btn-outline-primary" href="{% url 'logout' %}">Log Out</a>
+    </div>
+    <br>
+    <hr>
+    <h2>Signed-in as {{ request.user }}</h2>
+    <h3><a class="btn btn-sm btn-outline-primary" href="{% url 'employee' %}">View Your Employ Dashboard</a></h3>
+    <hr>
+
+{% endblock %}

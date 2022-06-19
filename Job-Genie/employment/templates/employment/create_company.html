@@ -1,0 +1,29 @@
+{% extends "employment/layout.html" %}
+{% load static %}
+
+{% block body %}
+<div style="text-align:center;">
+    <img src="static/employment/logo.png" alt="logo" width="150px">
+    <br>
+    <a class="btn btn-sm btn-outline-primary" href="{% url 'employee' %}">Employee Dashboard</a>
+    <a class="btn btn-sm btn-outline-primary" href="{% url 'company' %}">Companies</a>
+    <a class="btn btn-sm btn-outline-primary" href="{% url 'your_company' %}">Your Companies</a>
+    <a class="btn btn-sm btn-outline-primary" href="{% url 'logout' %}">Log Out</a>
+    </div>
+    <br>
+    <hr>
+    <div style="text-align: center;">
+    <h2>Signed-in as {{ request.user }}</h2>
+    <br>
+    <h6>Create a New Company !!...</h6>
+    <form action="{% url 'create_company' %}" method="POST">
+        {% csrf_token %}
+        <div class="form-group">
+            <input autofocus class="form-control" type="text" name="company" placeholder="Give Company Name">
+        </div>
+        <input class="btn btn-primary" type="submit" value="Create">
+    </form>
+</div>
+    <hr>
+
+{% endblock %}

@@ -1,0 +1,51 @@
+#logreg{
+    text-align: center;
+    border-style: solid;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+body{
+    background: fixed;
+    background-image: url(/static/employment/bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#font1{
+    font-family: fantasy;
+    text-decoration: underline;
+}
+
+.btn-outline-primary{
+    color: maroon;
+    border-color: darkgoldenrod;
+}
+.btn-outline-primary:hover{
+    background-color: black;
+    border-color: red;
+}
+.btn-outline-primary:active{
+    background-color: black;
+    border-color: red;
+}
+.btn-outline-primary:focus{
+    background-color: black;
+    border-color: red;
+    outline-color: red;
+    box-shadow: red;
+}
+.btn-outline-primary:focus, .btn-outline-primary.focus {
+ 
+    box-shadow: 0 0 0 0.2rem rgba(255, 0, 0, 0.5);
+   
+}
+.btn-outline-primary:not(:disabled):not(.disabled):active:focus, .btn-outline-primary:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-primary.dropdown-toggle:focus {
+ 
+    box-shadow: 0 0 0 0.2rem rgba(255, 0, 0, 0.5);
+ 
+}
